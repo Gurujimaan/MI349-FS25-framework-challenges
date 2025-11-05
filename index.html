@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hologram Chess Loading Screen</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+
+    <body class="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-indigo-950 to-black text-white">
+        <div class="relative">
+            <div class="w-32 h-32 rounded-full bg-indigo-500/20 blur-2xl animate-pulse absolute inset-0"></div>
+            <div class="relative text-6xl animate-spin-slow">♞</div>
+        </div>
+
+        <h1 class="mt-8 text-2xl font-light tracking-widest text-indigo-300 animate-pulse">
+            Setting up Holograms on the Board...
+        </h1>
+
+        <div class="mt-6 w-64 h-1 bg-indigo-900 rounded-full overflow-hidden">
+            <div class="h-full bg-indigo-400 animate-loading"></div>
+        </div>
+
+
+        <style>
+            @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+            }
+            .animate-spin-slow {
+            animation: spin-slow 8s linear infinite;
+            }
+            @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+            }
+            .animate-loading {
+            animation: loading 2s ease-in-out infinite;
+            }
+        </style>
+    </body>
+</html>
