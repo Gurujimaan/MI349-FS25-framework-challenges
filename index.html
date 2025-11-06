@@ -7,36 +7,48 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
+    <body class="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
+        <div class="text-center">
+            <div class="relative mx-auto w-32 h-32 mb-8">
+                <div class="w-full h-full rounded-full bg-cyan-500/20 blur-xl animate-pulse absolute inset-0"></div>
+                <div class="relative text-6xl animate-spin-slow">♞</div>
+            </div>
 
-    <body class="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-indigo-950 to-black text-white">
-        <div class="relative">
-            <div class="w-32 h-32 rounded-full bg-indigo-500/20 blur-2xl animate-pulse absolute inset-0"></div>
-            <div class="relative text-6xl animate-spin-slow">♞</div>
+            <h1 class="text-3xl font-bold mb-2 text-cyan-300">
+                Holo-Chess
+            </h1>
+            <p class="text-gray-300 mb-6">Holographic Interface</p>
+
+            <h2 class="text-xl text-purple-300 mb-4 animate-pulse">
+                Loading Game Assets...
+            </h2>
+
+            <div class="w-64 h-2 bg-gray-700 rounded-full overflow-hidden mb-6">
+                <div class="h-full bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full animate-loading"></div>
+            </div>
+
+            <div class="space-y-1 text-sm text-gray-400">
+                <p>✓ Board loaded</p>
+                <p>⏳ Turning on pieces...</p>
+                <p>Connecting to opponent</p>
+            </div>
         </div>
-
-        <h1 class="mt-8 text-2xl font-light tracking-widest text-indigo-300 animate-pulse">
-            Setting up Holograms on the Board...
-        </h1>
-
-        <div class="mt-6 w-64 h-1 bg-indigo-900 rounded-full overflow-hidden">
-            <div class="h-full bg-indigo-400 animate-loading"></div>
-        </div>
-
 
         <style>
             @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
             }
             .animate-spin-slow {
-            animation: spin-slow 8s linear infinite;
+                animation: spin-slow 8s linear infinite;
             }
+
             @keyframes loading {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+                0% { width: 0%; }
+                100% { width: 100%; }
             }
             .animate-loading {
-            animation: loading 2s ease-in-out infinite;
+                animation: loading 2s ease-in-out infinite;
             }
         </style>
     </body>
